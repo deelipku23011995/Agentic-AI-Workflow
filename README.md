@@ -41,7 +41,3 @@ Persist conversation history, internal agent thoughts, and execution context acr
 
 Wrap agent inputs and outputs with validation layers to sanitize prompts, prevent injection attacks, and guarantee compliance before emitting final answers.
 
----
-
-
-Distributed under the [MIT License](https://www.google.com/search?q=LICENSE).
