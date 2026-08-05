@@ -45,3 +45,164 @@
 - LangSmith
 - OpenTelemetry
 
+
+# Enterprise Agentic AI Development Notes
+
+## 1. Core Agent Patterns
+- ReAct (Reason → Act → Observe)
+- Planning Agent
+- Task Decomposition
+- Multi-Agent Collaboration
+- Supervisor / Router Agent
+- Reflection & Self-Correction
+- LLM-as-a-Judge
+
+---
+
+## 2. Knowledge & Memory
+- Hybrid RAG (Vector + BM25)
+- Semantic Chunking
+- Re-ranking
+- Multi-Query Retrieval
+- GraphRAG / Agentic RAG
+- Short-Term Memory
+- Long-Term Memory (Vector DB)
+
+---
+
+## 3. Tool Usage
+- Function Calling
+- Dynamic Tool Selection
+- Parallel Tool Execution
+- Structured Outputs (JSON Schema)
+- Retry Failed Steps Only
+
+---
+
+## 4. Cost Optimization
+- Dynamic Model Routing
+- Response & Embedding Caching
+- Context Compression
+- Query Classification
+- Early Stopping
+- Maximum Iteration Limits
+- Confidence-Based Stopping
+- Adaptive Reasoning Depth
+- Batch Requests
+- Retrieval Before Reasoning
+
+---
+
+## 5. Reliability
+- Reflection
+- LLM-as-a-Judge
+- Confidence Scoring
+- Hallucination Detection
+- Human-in-the-Loop (HITL)
+- Fallback Models
+- Retry with Exponential Backoff
+
+---
+
+## 6. Security & Guardrails
+- Prompt Injection Protection
+- Input Validation
+- Output Validation
+- JSON Schema Validation
+- PII Detection & Masking
+- RBAC (Role-Based Access Control)
+- Audit Logging
+- Secret Management
+
+---
+
+## 7. Workflow Orchestration
+- State Machine (LangGraph)
+- Event-Driven Agents
+- DAG-Based Workflows
+- Parallel Execution
+- Agent Communication (MCP / A2A)
+
+---
+
+## 8. Observability
+- Agent Tracing
+- Token Usage
+- Cost Monitoring
+- Tool Call Logs
+- Latency Metrics
+- Error Tracking
+- Performance Dashboards
+
+---
+
+## 9. Evaluation
+- RAGAS
+- DeepEval
+- Golden Test Sets
+- A/B Testing
+- User Feedback Loop
+- Continuous Evaluation
+- Hallucination Metrics
+
+---
+
+## 10. Enterprise Architecture
+
+```text
+User
+ │
+ ▼
+Intent Classification
+ │
+ ▼
+Router Agent
+ │
+ ├── Planner Agent
+ ├── Research Agent
+ ├── SQL/API Agent
+ ├── Code Agent
+ │
+ ▼
+Hybrid RAG
+ │
+ ▼
+Parallel Tool Calls
+ │
+ ▼
+Frontier LLM
+ │
+ ▼
+Reflection
+ │
+ ▼
+Guardrails
+ │
+ ▼
+Validation
+ │
+ ▼
+Final Response
+```
+
+---
+
+
+
+# Production Best Practices
+
+- Plan before execution
+- Retrieve before reasoning
+- Tool-first approach
+- Use frontier models only for complex reasoning
+- Cache everything possible
+- Compress context
+- Execute tools in parallel
+- Reflect only when needed
+- Validate all outputs
+- Monitor cost, latency, and quality
+- Continuously evaluate and improve
+
+---
+
+#
